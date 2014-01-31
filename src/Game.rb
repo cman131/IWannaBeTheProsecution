@@ -17,6 +17,11 @@ class Game
          exit
        end
     end
+    @screen.fill(:red)
+    @screen.flip
+    sleep(0.1)
+    @screen.fill(:blue)
+    @screen.flip
   end
 
   def run()
