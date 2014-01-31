@@ -1,0 +1,8 @@
+boss level
+character
+bullets
+level
+dangers
+platform
+boss
+game
