@@ -2,12 +2,13 @@ require 'rubygems'
 require 'rubygame'
 
 class Game
-  def initialize()
     @screen = Rubygame::Screen.new [640, 480], 0, 
     [Rubygame::HWSURFACE, 
       Rubygame::DOUBLEBUF]
-    @screen.title = "FunTime" 
     @queue = Rubygame::EventQueue.new
+    @level = Level.new
+  def initialize()
+    @screen.title = "FunTime" 
   end
   
   def update()
@@ -25,4 +26,9 @@ class Game
       update()
     end
   end
+  
+  def draw()
+    @level.draw(@screen)
+  end
+  
 end
