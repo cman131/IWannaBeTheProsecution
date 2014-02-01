@@ -9,7 +9,8 @@ class Game
       Rubygame::DOUBLEBUF]
     @queue = Rubygame::EventQueue.new
     @level = Level.new("","","","","")
-    @screen.title = "FunTime" 
+    @screen.title = "I Wanna Be The Prosecution"
+    @background = Rubygame::Surface.load("../res/backtest.png") 
   end
   
   def update()
@@ -19,10 +20,8 @@ class Game
          exit
        end
     end
-    @screen.fill(:red)
-    @screen.flip
-    @screen.fill(:blue)
-    @screen.flip
+    @background.blit(@screen, [0,0], [0,0,640,480])
+    @screen.update()
   end
 
   def run()
