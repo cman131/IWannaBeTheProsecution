@@ -6,4 +6,8 @@ class Level
     @character = character
     @dangers = dangers
   end
+  
+  def getBackground()
+    return @background
+  end
 end

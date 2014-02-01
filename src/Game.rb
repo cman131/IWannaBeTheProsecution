@@ -8,9 +8,9 @@ class Game
     [Rubygame::HWSURFACE, 
       Rubygame::DOUBLEBUF]
     @queue = Rubygame::EventQueue.new
-    @level = Level.new("","","","","")
+    @level = Level.new("../res/backtest.png","","","","")
     @screen.title = "I Wanna Be The Prosecution"
-    @background = Rubygame::Surface.load("../res/backtest.png") 
+    @background = Rubygame::Surface.load(@level.getBackground()) 
   end
   
   def update()
